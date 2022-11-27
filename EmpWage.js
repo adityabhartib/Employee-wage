@@ -23,7 +23,7 @@ switch(empCheck){
         break;
 }
 }
-let empHrs=0, day = 0 , totalWorkingHrs = 0;
+let empHrs=0, day = 0 , totalWorkingHrs = 0, totalwage = 0;
 while(day<=NUM_OF_WORKING_DAYS && totalWorkingHrs<=MAX_HRS_IN_MONTH){
     totalWorkingHrs++;
    
@@ -32,6 +32,8 @@ day++;
 empHrs = getWoirkingHrs(empCheck);
 let empWage = empHrs*WAGE_PER_HRS;
 
+totalwage+=empWage;
 console.log("EmpWage : "+empWage);
 console.log("Working Day :> "+day);
 }
+console.log("total Wage : "+totalwage)
